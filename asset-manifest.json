@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/Luxury-Presence---Project/static/css/main.2200d085.css",
-    "main.js": "/Luxury-Presence---Project/static/js/main.09e57877.js",
+    "main.css": "/Luxury-Presence---Project/static/css/main.5dcfb9c4.css",
+    "main.js": "/Luxury-Presence---Project/static/js/main.2f868412.js",
     "static/js/453.038b1095.chunk.js": "/Luxury-Presence---Project/static/js/453.038b1095.chunk.js",
     "static/media/ServiceBG.png": "/Luxury-Presence---Project/static/media/ServiceBG.19597ae14b3f6854f02a.png",
     "static/media/desktop.png": "/Luxury-Presence---Project/static/media/desktop.f5b1752937958ab8baf7.png",
     "index.html": "/Luxury-Presence---Project/index.html",
-    "main.2200d085.css.map": "/Luxury-Presence---Project/static/css/main.2200d085.css.map",
-    "main.09e57877.js.map": "/Luxury-Presence---Project/static/js/main.09e57877.js.map",
+    "main.5dcfb9c4.css.map": "/Luxury-Presence---Project/static/css/main.5dcfb9c4.css.map",
+    "main.2f868412.js.map": "/Luxury-Presence---Project/static/js/main.2f868412.js.map",
     "453.038b1095.chunk.js.map": "/Luxury-Presence---Project/static/js/453.038b1095.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2200d085.css",
-    "static/js/main.09e57877.js"
+    "static/css/main.5dcfb9c4.css",
+    "static/js/main.2f868412.js"
   ]
 }
