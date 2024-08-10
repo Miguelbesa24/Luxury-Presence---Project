@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/Miguelbesa24/Luxury-Presence---Project.git/static/css/main.2200d085.css",
+    "main.js": "/Miguelbesa24/Luxury-Presence---Project.git/static/js/main.31e1d0e8.js",
+    "static/js/453.038b1095.chunk.js": "/Miguelbesa24/Luxury-Presence---Project.git/static/js/453.038b1095.chunk.js",
+    "static/media/ServiceBG.png": "/Miguelbesa24/Luxury-Presence---Project.git/static/media/ServiceBG.19597ae14b3f6854f02a.png",
+    "static/media/desktop.png": "/Miguelbesa24/Luxury-Presence---Project.git/static/media/desktop.f5b1752937958ab8baf7.png",
+    "index.html": "/Miguelbesa24/Luxury-Presence---Project.git/index.html",
+    "main.2200d085.css.map": "/Miguelbesa24/Luxury-Presence---Project.git/static/css/main.2200d085.css.map",
+    "main.31e1d0e8.js.map": "/Miguelbesa24/Luxury-Presence---Project.git/static/js/main.31e1d0e8.js.map",
+    "453.038b1095.chunk.js.map": "/Miguelbesa24/Luxury-Presence---Project.git/static/js/453.038b1095.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2200d085.css",
+    "static/js/main.31e1d0e8.js"
+  ]
+}
