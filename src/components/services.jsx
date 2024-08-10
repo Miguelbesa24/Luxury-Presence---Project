@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Logo from "../assets/jhsereno-light.png";
 import BG from "../assets/ServiceBG.png";
 import envelope from"../assets/envelope.png";
@@ -6,9 +6,51 @@ import flag from"../assets/flag.png";
 import map from"../assets/map.png";
 import photo from"../assets/photo.png";
 import desktop from"../assets/desktop.png";
+import flip1 from "../assets/flip1.png";
+import flip2 from "../assets/flip2.png";
+import flip3 from "../assets/flip3.png";
+import flip4 from "../assets/flip4.png";
 
 const Services = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [flippedCard, setFlippedCard] = useState(null); // State to track flipped card
+    const cardRefs = useRef([React.createRef(), React.createRef(), React.createRef(), React.createRef()]);
+  
+    const handleMouseEnter = (index) => {
+      if (window.innerWidth > 768) {
+        cardRefs.current[index].classList.add('flipped');
+      }
+    };
+  
+    const handleMouseLeave = (index) => {
+      if (window.innerWidth > 768) {
+        cardRefs.current[index].classList.remove('flipped');
+      }
+    };
+  
+    const handleCardClick = (index) => {
+      setFlippedCard(index === flippedCard ? null : index); // Toggle flip on click
+    };
+  const images = [flip1, flip2, flip3, flip4];
+  const texts = [
+    'Decor Guidance',
+    `<ul class="list-disc pl-5">
+      <h1 class="text-xl font-bold">My Staging Expertise</h1>
+       <br>
+      <li>Unclutter and organize your home</li>
+      <li>Neatly arrange drawers and cabinets</li>
+      <li>Keep pets outdoors or off the premises</li>
+      <li>Play soft music</li>
+    </ul>`,
+    'Intentional Layout',
+    `<ul class="list-disc pl-5">
+    <br>
+      <li>Unclutter and organize your home</li>
+      <li>Neatly arrange drawers and cabinets</li>
+      <li>Keep pets outdoors or off the premises</li>
+      <li>Play soft music</li>
+    </ul>`
+  ];
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -49,7 +91,6 @@ const Services = () => {
             <a href="#contact-us" className="hover:text-gray-400 hover-underline-offset transition duration-100">CONTACT US</a>
           </div>
           <div className="md:hidden flex justify-end items-center w-full">
-          
             <button onClick={toggleMenu} className="text-2xl focus:outline-none">
               &#9776;
             </button>
@@ -57,27 +98,24 @@ const Services = () => {
         </div>
       </nav>
       {isMenuOpen && (
-  <nav className="fixed top-0 left-0 w-full bg-gray-800 shadow-md z-20 md:hidden">
-    <div className="flex flex-col p-6 text-xl text-gray-100">
-      <div className="flex justify-end">
-        <button onClick={toggleMenu} className="text-2xl font-bold text-gray-100 focus:outline-none">
-          &times;
-        </button>
-      </div>
-      <a href="#meet-team" onClick={toggleMenu} className="hover:text-gray-400 mt-4">MEET TEAM</a>
-      <a href="#search-homes" onClick={toggleMenu} className="hover:text-gray-400 mt-2">SEARCH FOR HOMES</a>
-      <a href="#our-communities" onClick={toggleMenu} className="hover:text-gray-400 mt-2">OUR COMMUNITIES</a>
-      <a href="#home-valuation" onClick={toggleMenu} className="hover:text-gray-400 mt-2">HOME VALUATION</a>
-      <a href="#services" onClick={toggleMenu} className="hover:text-gray-400 mt-2">SERVICES</a>
-      <a href="#homes-america" onClick={toggleMenu} className="hover:text-gray-400 mt-2">HOMES ACROSS AMERICA</a>
-      <a href="#testimonials" onClick={toggleMenu} className="hover:text-gray-400 mt-2">TESTIMONIALS</a>
-      <a href="#contact-us" onClick={toggleMenu} className="hover:text-gray-400 mt-2">CONTACT US</a>
-    </div>
-  </nav>
-)}
-
-
-
+        <nav className="fixed top-0 left-0 w-full bg-gray-800 shadow-md z-20 md:hidden">
+          <div className="flex flex-col p-6 text-xl text-gray-100">
+            <div className="flex justify-end">
+              <button onClick={toggleMenu} className="text-2xl font-bold text-gray-100 focus:outline-none">
+                &times;
+              </button>
+            </div>
+            <a href="#meet-team" onClick={toggleMenu} className="hover:text-gray-400 mt-4">MEET TEAM</a>
+            <a href="#search-homes" onClick={toggleMenu} className="hover:text-gray-400 mt-2">SEARCH FOR HOMES</a>
+            <a href="#our-communities" onClick={toggleMenu} className="hover:text-gray-400 mt-2">OUR COMMUNITIES</a>
+            <a href="#home-valuation" onClick={toggleMenu} className="hover:text-gray-400 mt-2">HOME VALUATION</a>
+            <a href="#services" onClick={toggleMenu} className="hover:text-gray-400 mt-2">SERVICES</a>
+            <a href="#homes-america" onClick={toggleMenu} className="hover:text-gray-400 mt-2">HOMES ACROSS AMERICA</a>
+            <a href="#testimonials" onClick={toggleMenu} className="hover:text-gray-400 mt-2">TESTIMONIALS</a>
+            <a href="#contact-us" onClick={toggleMenu} className="hover:text-gray-400 mt-2">CONTACT US</a>
+          </div>
+        </nav>
+      )}
 
       <section
         id="services-page"
@@ -115,7 +153,7 @@ const Services = () => {
         </div>
         <div className='py-20 md:px-20'>
           <div className='flex justify-center py-6'>
-            <img src={desktop} alt="Desktop view" className="w-full md:w-3/4 "  />
+            <img src={desktop} alt="Desktop view" className="w-full md:w-3/4 shadow-lg"  />
           </div>
   
           <div className='flex flex-col md:flex-row justify-between items-center text-center ml-10 pr-10'>
@@ -147,6 +185,48 @@ const Services = () => {
           </div>
         </div>
       </section>
+
+      <section className="w-full min-h-screen pt-24 flex justify-center items-center">
+  <div className="flex flex-wrap justify-center gap-4">
+    {images.map((image, index) => (
+      <div
+        key={index}
+        ref={(el) => (cardRefs.current[index] = el)}
+        className={`flip-card relative md:w-64 md:h-64 cursor-pointer perspective ${flippedCard === index ? 'flipped' : ''}`}
+        onMouseEnter={() => handleMouseEnter(index)}
+        onMouseLeave={() => handleMouseLeave(index)}
+        onClick={() => handleCardClick(index)}
+      >
+        <div className="flip-card-inner">
+          {/* Front Side */}
+          <div className={`flip-card-front absolute inset-0 w-full h-full backface-hidden rounded-lg ${index % 2 === 0 ? 'flex flex-col items-center justify-center bg-gray-800' : ''}`}>
+            {index % 2 === 0 ? (
+              <div className="text-center px-4 py-2">
+                <p className="text-sm md:text-lg lg:text-2xl text-white font-serif">{texts[index]}</p>
+              </div>
+            ) : (
+              <img src={image} alt={`Flip Card Front ${index + 1}`} className="w-full h-full object-cover rounded-lg shadow-lg" />
+            )}
+          </div>
+
+          {/* Back Side */}
+          <div className={`flip-card-back absolute inset-0 w-full h-full backface-hidden rounded-lg ${index % 2 === 0 ? 'bg-gray-800' : 'bg-gray-800'}`}>
+            {index % 2 === 0 ? (
+              <img src={image} alt={`Flip Card Back ${index + 1}`} className="w-full h-full object-cover rounded-lg shadow-lg" />
+            ) : (
+              <div className="px-4 py-4">
+                <p className="text-sm md:text-sm font-semibold text-white" dangerouslySetInnerHTML={{ __html: texts[index] }} />
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
+
+
+
     </div>
   );
 };

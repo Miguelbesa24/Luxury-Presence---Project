@@ -36,3 +36,64 @@ code {
 .hover-underline-offset:hover::after {
   width: 100%;
 }
+.perspective {
+  perspective: 1000px;
+}
+
+.flip-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 100%; /* Ensure card doesn't exceed container width */
+  max-height: 100%; /* Ensure card doesn't exceed container height */
+}
+
+.flip-card-inner {
+  transition: transform 0.8s ease-in-out;
+  transform-style: preserve-3d;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.flip-card.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  backface-visibility: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+
+/* Additional mobile adjustments */
+@media (max-width: 768px) {
+  .flip-card {
+    width: 60vw; /* Adjust as needed for mobile */
+    height: 60vw; /* Adjust as needed for mobile */
+  }
+}
+
+
+.text-content ul {
+  list-style-type: disc; /* Add bullets */
+  padding-left: 20px; /* Space for bullets */
+  text-align: center; /* Center text */
+}
+
+.text-content li {
+  margin-bottom: 10px; /* Space between list items */
+}
+
+.text-content h1 {
+  font-size: 2rem; /* Adjust size as needed */
+  font-weight: bold;
+  margin: 0; /* Remove default margin */
+}
+
