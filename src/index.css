@@ -16,9 +16,12 @@ code {
     monospace;
 }
 .nav-bg {
-  background-color: rgb(60, 60, 60); /* Adjust color and opacity as needed */
+  background-color: rgb(60, 60, 60); 
 }
 
+.bg-gray-800 {
+  background-color: rgba(60, 60, 60); 
+}
 .hover-underline-offset::after {
   content: "";
   display: block;
