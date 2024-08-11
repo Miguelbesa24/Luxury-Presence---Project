@@ -19,6 +19,7 @@ import slide3 from "../assets/slide3.png";
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import sponsor from "../assets/sponsor.png";
 
 
 const Services = () => {
@@ -269,7 +270,7 @@ const Services = () => {
       </section>
 
       <section id="marketing" className="w-full min-h-screen pt-24">
-        <div className="text-2xl md:text-5xl font-serif flex justify-center">
+        <div className="text-2xl md:text-5xl font-serif flex justify-center text-center">
           Comprehensive Marketing Plan
         </div>
         <div className="py-20 md:px-20">
@@ -517,11 +518,11 @@ const Services = () => {
             We provide every one of our clients with a level of service they won’t find anywhere else. We give them what they need, often before they know they need it. In real estate, almost everything can be negotiated. When you choose Hansen Partners, it is experience is 100% nonnegotiable. And it’s an experience like no other.
           </div>
         </div>
-        <div className="w-full md:w-1/2 mt-8 md:mt-0 px-4 md:px-8 flex justify-center">
+        <div className="w-full md:w-1/2 mt-8 md:mt-0 px-4 md:px-8 flex justify-center ">
           <img
             src={slide1}
             alt="slide"
-            className="w-full md:w-3/4 h-auto shadow-lg rounded-lg"
+            className="w-full md:w-3/4 h-auto shadow-2xl rounded-lg"
           />
         </div>
       </div>
@@ -534,7 +535,7 @@ const Services = () => {
           <img
             src={slide2}
             alt="slide"
-            className="w-full md:w-3/4 h-auto shadow-lg rounded-lg"
+            className="w-full md:w-3/4 h-auto shadow-2xl rounded-lg"
           />
         </div>
         <div className="flex flex-col text-center md:text-left space-y-4 md:space-y-6 w-full md:w-1/2 px-4 md:px-8">
@@ -563,7 +564,7 @@ const Services = () => {
           <img
             src={slide3}
             alt="slide"
-            className="w-full md:w-3/4 h-auto shadow-lg rounded-lg"
+            className="w-full md:w-3/4 h-auto shadow-2xl rounded-lg"
           />
         </div>
       </div>
@@ -593,8 +594,49 @@ const Services = () => {
   </Slider>
 </section>
 
-<section className="min-h-screen px-4 md:px-10 flex justify-center items-center">
-    </section>
+<section className="min-h-screen px-4 md:px-10 py-10 flex justify-center items-center bg-gray-100">
+  <div className="flex flex-col w-full max-w-7xl space-y-8">
+    <div className="text-3xl md:text-4xl font-serif text-gray-800 text-center">
+      We Market Your Home to The World
+    </div>
+    <div className="text-xl md:text-2xl font-semibold text-gray-700 text-center">
+      Our Online Marketing Strategy
+    </div>
+    <div className="text-base md:text-lg leading-relaxed text-gray-600 text-center ">
+      The Bay Area remains one of the world's most sought-after regions to live in, and when looking to sell, it is vital that your home be marketed online to audiences locally, nationally, and internationally.
+    </div>
+    <div className="flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-8">
+      <div className="flex flex-col bg-white p-6 rounded-lg shadow-lg">
+        <div className="text-xl font-bold text-gray-800 mb-2">
+          Local Exposure
+        </div>
+        <div className="text-base text-gray-600 leading-relaxed">
+          Through our partnership with Nextdoor, the private online social network now used in over 80% of U.S. neighborhoods and virtually all Bay Area neighborhoods, we make sure your home receives targeted local exposure. When you list your home with Hansen Partners it will automatically appear on Nextdoor in your neighborhood.
+        </div>
+      </div>
+      <div className="flex flex-col bg-white p-6 rounded-lg shadow-lg">
+        <div className="text-xl font-bold text-gray-800 mb-2">
+          National Exposure
+        </div>
+        <div className="text-base text-gray-600 leading-relaxed">
+          We secure strategic positioning and enhancement on Realtor.com, Trulia, and Zillow, driving more consumers to your home and increasing exposure. We will receive every inquiry about your property directly.
+        </div>
+      </div>
+      <div className="flex flex-col bg-white p-6 rounded-lg shadow-lg">
+        <div className="text-xl font-bold text-gray-800 mb-2">
+          International Exposure
+        </div>
+        <div className="text-base text-gray-600 leading-relaxed">
+          To expose your luxury listing to millions of potential homebuyers worldwide, we promote on prominent international real estate portals, including Wall Street Journal, LuxuryPortfolio.com, LuxuryRealEstate.com, LeadingRE.com, UniqueHomes.com, China.apr.com, Caimeiju, Juwai, and Country Life UK.
+        </div>
+      </div>
+    </div>
+    <div className="flex justify-center items-center mt-10">
+      <img src={sponsor} alt="sponsor" className="w-1/6" />
+    </div>
+  </div>
+</section>
+
 
 
     </div>
