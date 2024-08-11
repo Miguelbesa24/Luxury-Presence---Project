@@ -1,23 +1,30 @@
 {
   "files": {
-    "main.css": "/Luxury-Presence---Project/static/css/main.01845b19.css",
-    "main.js": "/Luxury-Presence---Project/static/js/main.32af88e3.js",
+    "main.css": "/Luxury-Presence---Project/static/css/main.f2d6c36c.css",
+    "main.js": "/Luxury-Presence---Project/static/js/main.d202c944.js",
     "static/js/453.038b1095.chunk.js": "/Luxury-Presence---Project/static/js/453.038b1095.chunk.js",
     "static/media/ServiceBG.png": "/Luxury-Presence---Project/static/media/ServiceBG.19597ae14b3f6854f02a.png",
     "static/media/desktop.png": "/Luxury-Presence---Project/static/media/desktop.f5b1752937958ab8baf7.png",
     "static/media/selling.png": "/Luxury-Presence---Project/static/media/selling.50e6138460bc5f119a4c.png",
     "static/media/buying.png": "/Luxury-Presence---Project/static/media/buying.5838a5a86e8f0d0c4b50.png",
+    "static/media/Slide1.png": "/Luxury-Presence---Project/static/media/Slide1.ef831bbc13640bf49fa9.png",
+    "static/media/slide3.png": "/Luxury-Presence---Project/static/media/slide3.f65dbb9687717294b181.png",
+    "static/media/slide2.png": "/Luxury-Presence---Project/static/media/slide2.49596d654bb4ff9ba4e1.png",
     "static/media/flip3.png": "/Luxury-Presence---Project/static/media/flip3.ca9f4320428c901f0c1f.png",
     "static/media/flip4.png": "/Luxury-Presence---Project/static/media/flip4.86c6185219fb3accabf1.png",
     "static/media/flip1.png": "/Luxury-Presence---Project/static/media/flip1.c34ccf26a41bacae9520.png",
     "static/media/flip2.png": "/Luxury-Presence---Project/static/media/flip2.6906dbb30f2000ac287a.png",
+    "static/media/slick.svg": "/Luxury-Presence---Project/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/Luxury-Presence---Project/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/Luxury-Presence---Project/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/Luxury-Presence---Project/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/Luxury-Presence---Project/index.html",
-    "main.01845b19.css.map": "/Luxury-Presence---Project/static/css/main.01845b19.css.map",
-    "main.32af88e3.js.map": "/Luxury-Presence---Project/static/js/main.32af88e3.js.map",
+    "main.f2d6c36c.css.map": "/Luxury-Presence---Project/static/css/main.f2d6c36c.css.map",
+    "main.d202c944.js.map": "/Luxury-Presence---Project/static/js/main.d202c944.js.map",
     "453.038b1095.chunk.js.map": "/Luxury-Presence---Project/static/js/453.038b1095.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.01845b19.css",
-    "static/js/main.32af88e3.js"
+    "static/css/main.f2d6c36c.css",
+    "static/js/main.d202c944.js"
   ]
 }
