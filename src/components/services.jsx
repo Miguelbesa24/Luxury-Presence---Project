@@ -10,6 +10,10 @@ import flip1 from "../assets/flip1.png";
 import flip2 from "../assets/flip2.png";
 import flip3 from "../assets/flip3.png";
 import flip4 from "../assets/flip4.png";
+import selling from "../assets/selling.png";
+import buying from "../assets/buying.png";
+import NumberAnimation from './NumberAnimation';
+
 
 const Services = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -98,7 +102,7 @@ const Services = () => {
         </div>
       </nav>
       {isMenuOpen && (
-        <nav className="fixed top-0 left-0 w-full bg-gray-800 shadow-md z-20 md:hidden">
+        <nav className="fixed top-0 left-0 w-full bg-black shadow-md z-20 md:hidden">
           <div className="flex flex-col p-6 text-xl text-gray-100">
             <div className="flex justify-end">
               <button onClick={toggleMenu} className="text-2xl font-bold text-gray-100 focus:outline-none">
@@ -147,7 +151,7 @@ const Services = () => {
         </div>
       </section>
 
-      <section className="w-full min-h-screen pt-24">
+      <section id='marketing' className="w-full min-h-screen pt-24">
         <div className='text-2xl md:text-5xl font-serif flex justify-center'>
           Comprehensive Marketing Plan
         </div>
@@ -186,7 +190,7 @@ const Services = () => {
         </div>
       </section>
 
-      <section className="w-full min-h-screen pt-24 flex justify-center items-center">
+      <section id='flip' className="w-full min-h-screen pt-8 flex justify-center items-center">
   <div className="flex flex-wrap justify-center gap-4">
     {images.map((image, index) => (
       <div
@@ -224,8 +228,120 @@ const Services = () => {
     ))}
   </div>
 </section>
+<section
+      id="selling"
+      className="min-h-screen flex flex-col items-center justify-center bg-center bg-cover bg-no-repeat px-4 md:px-10 relative rounded-3xl mt-10"
+      style={{
+        backgroundImage: `url(${selling})`,
+        backgroundPosition: 'center',
+        backgroundSize: 'cover',
+      }}
+    >
+      <div className="absolute inset-0 bg-black opacity-50 rounded-3xl"></div>
+      <div className="relative flex flex-col items-center text-white text-2xl md:text-5xl font-serif my-10 md:pt-0">
+        <h2 className="text-center">The Selling Process</h2>
+      </div>
+      <div className="relative flex flex-col md:flex-row items-center text-center w-full px-4 md:px-10 mt-10 md:mt-18">
+        <div className="flex flex-col w-full">
+          <div className="flex flex-col md:flex-row text-white md:space-x-10 space-y-6 md:space-y-0">
+            <div className="flex flex-col items-center text-xl flex-shrink-0 mb-4 md:mb-0">
+              <NumberAnimation number={1} />
+              <div className="md:leading-tight">
+                INITIAL CONSULTATION &<br /> PLANNING
+              </div>
+            </div>
+            <div className="md:px-10"></div>
+            <div className="flex flex-col items-center text-xl flex-shrink-0 mb-4 md:mb-0">
+              <NumberAnimation number={2} />
+              <div className="md:leading-tight">
+                DEVISE & EXECUTE <br /> MARKETING PLAN
+              </div>
+            </div>
+            <div className="md:px-10"></div>
+            <div className="flex flex-col items-center text-xl flex-shrink-0 mb-4 md:mb-0">
+              <NumberAnimation number={3} />
+              <div className="md:leading-tight">
+                REVIEW OFFERS & REACH <br /> AGREEMENT WITH BUYER
+              </div>
+            </div>
+          </div>
 
+          <div className="hidden md:block w-full h-[1.5px] bg-white relative my-8"></div>
 
+          <div className="flex flex-col md:flex-row text-white md:space-x-10 space-y-6 md:space-y-0">
+            <div className="md:px-10"></div>
+            <div className="flex flex-col items-center text-xl flex-shrink-0 mb-4 md:mb-0">
+              <NumberAnimation number={4} />
+              <div className="md:leading-tight">
+                COMPLETE TRANSACTION PROCESS
+              </div>
+            </div>
+            <div className="md:px-10"></div>
+            <div className="flex flex-col items-center text-xl flex-shrink-0 mb-4 md:mb-0">
+              <NumberAnimation number={5} />
+              <div className="md:leading-tight">
+                AFTER - SALE SERVICE
+              </div>
+            </div>
+            <div className="md:px-10"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section
+      id="buying"
+      className="min-h-screen flex flex-col items-center justify-center bg-center bg-cover bg-no-repeat px-4 md:px-10 relative rounded-3xl mt-10"
+      style={{
+        backgroundImage: `url(${buying})`,
+        backgroundPosition: 'center',
+        backgroundSize: 'cover',
+      }}
+    >
+      <div className="absolute inset-0 bg-black opacity-50 rounded-3xl"></div>
+      <div className="relative flex flex-col items-center text-white text-2xl md:text-5xl font-serif my-10 md:pt-0">
+        <h2 className="text-center">The Buying Process</h2>
+      </div>
+      <div className="relative flex flex-col md:flex-row items-center text-center w-full px-4 md:px-10 mt-10 md:mt-18">
+        <div className="flex flex-col w-full">
+          <div className="flex flex-col md:flex-row text-white md:space-x-10 space-y-6 md:space-y-0">
+          <div className="md:px-10"></div>
+            <div className="flex flex-col items-center text-xl flex-shrink-0 mb-4 md:mb-0">
+              <NumberAnimation number={1} />
+              <div className="md:leading-tight">
+                INITIAL CONSULTATION &<br /> PLANNING
+              </div>
+            </div>
+            <div className="md:px-10"></div>
+            <div className="flex flex-col items-center text-xl flex-shrink-0 mb-4 md:mb-0">
+              <NumberAnimation number={2} />
+              <div className="md:leading-tight">
+                SEARCH FOR A HOME & <br></br> GET PRE-APPROVED 
+              </div>
+            </div>
+          </div>
+
+          <div className="hidden md:block w-full h-[1.5px] bg-white relative my-8"></div>
+
+          <div className="flex flex-col md:flex-row text-white md:space-x-10 space-y-6 md:space-y-0">
+            <div className="md:px-32"></div>
+            <div className="flex flex-col items-center text-xl flex-shrink-0 mb-4 md:mb-0">
+              <NumberAnimation number={3} />
+              <div className="md:leading-tight">
+                SUBMIT AN OFFER
+              </div>
+            </div>
+            <div className="md:px-10"></div>
+            <div className="flex flex-col items-center text-xl flex-shrink-0 mb-4 md:mb-0">
+              <NumberAnimation number={4} />
+              <div className="md:leading-tight">
+              COMPLETE SETTLEMENT PROCESS
+              </div>
+            </div>
+            <div className="md:px-10"></div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     </div>
   );

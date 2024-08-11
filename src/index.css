@@ -16,11 +16,11 @@ code {
     monospace;
 }
 .nav-bg {
-  background-color: rgb(60, 60, 60); 
+  background-color: rgb(2, 2, 2); 
 }
 
 .bg-gray-800 {
-  background-color: rgba(60, 60, 60); 
+  background-color: rgba(2, 2, 2); 
 }
 .hover-underline-offset::after {
   content: "";
