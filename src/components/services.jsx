@@ -20,7 +20,14 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import sponsor from "../assets/sponsor.png";
-
+import luxury from "../assets/luxury.png";
+import luxury2 from "../assets/luxury2.png";
+import luxury3 from "../assets/luxury3.png";
+import luxury4 from "../assets/luxury4.png";
+import luxury5 from "../assets/luxury5.png";
+import drone from "../assets/drone.png";
+import phone from "../assets/phone.png";
+import work from "../assets/work.png";
 
 const Services = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -331,7 +338,7 @@ const Services = () => {
 
       <section
         id="flip"
-        className="w-full min-h-screen pt-8 flex justify-center items-center"
+        className="w-full min-h-screen pt-8 flex justify-center items-center bg-gray-200"
       >
         <div className="flex flex-wrap justify-center gap-4">
           {images.map((image, index) => (
@@ -594,7 +601,7 @@ const Services = () => {
   </Slider>
 </section>
 
-<section className="min-h-screen px-4 md:px-10 py-10 flex justify-center items-center bg-gray-100">
+<section className="min-h-screen px-4 md:px-10 py-10 flex justify-center items-center bg-gray-100 mt-8">
   <div className="flex flex-col w-full max-w-7xl space-y-8">
     <div className="text-3xl md:text-4xl font-serif text-gray-800 text-center">
       We Market Your Home to The World
@@ -632,10 +639,121 @@ const Services = () => {
       </div>
     </div>
     <div className="flex justify-center items-center mt-10">
-      <img src={sponsor} alt="sponsor" className="w-1/6" />
+      <img src={sponsor} alt="sponsor" className="w-1/2 md:w-1/6" />
     </div>
   </div>
 </section>
+
+<section className="min-h-screen px-4 md:mx-20 flex justify-center items-center">
+  <div className="flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-8 w-full">
+    <div className="flex flex-col md:w-1/2 space-y-6">
+      <div className="flex flex-row space-x-4 justify-center">
+        <img src={luxury} alt="luxury1" className="w-1/4 md:w-[10%]" />
+        <img src={luxury2} alt="luxury2" className="w-1/4 md:w-1/6" />
+        <img src={luxury3} alt="luxury3" className="w-1/4 md:w-1/5" />
+      </div>
+      <div className="text-lg font-bold text-center md:text-left">
+        Leading Real Estate Companies of The World® & Luxury Portfolio International
+      </div>
+      <div className="text-justify text-sm md:text-base leading-relaxed">
+        JRockcliff is a founding member of Luxury Portfolio International®, the luxury division of Leading Real Estate Companies of the World®. With more than 500 member firms around the world, our luxury listings are exposed to a vast global audience and reach potential buyers and investors in over 50 countries.
+      </div>
+      <div className="text-lg font-bold text-center md:text-left">
+        Who's Who in Luxury Real Estate
+      </div>
+      <div className="text-justify text-sm md:text-base leading-relaxed">
+        Who’s Who in Luxury Real Estate is a global collection of luxury real estate brokers.
+      </div>
+    </div>
+    <div className="md:w-1/2 flex justify-center md:justify-end">
+      <img src={luxury4} alt="luxury4" className="w-full md:w-[90%] rounded-lg shadow-lg" />
+    </div>
+  </div>
+</section>
+
+<section className="min-h-screen px-4 py-10 flex justify-center items-center mt-8 bg-gray-100">
+  <div className="flex flex-col space-y-8 md:mx-20">
+    <div className="flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-8 w-full">
+      <div className="md:w-1/2 flex justify-center md:justify-end">
+        <img src={luxury5} alt="luxury5" className="w-full md:w-[90%] rounded-lg shadow-lg" />
+      </div>
+      <div className="flex flex-col md:w-1/2 space-y-6">
+        <div className="text-justify text-sm md:text-base leading-relaxed">
+          Through our international affiliations, we have a strong presence in over 50 countries. Our luxury listings are sent to prominent international real estate sites, reaching over 70 million potential buyers and investors worldwide through our relationships with:
+        </div>
+        <div className="flex justify-center space-x-4">
+          <img src={luxury} alt="luxury1" className="w-1/4 md:w-1/5" />
+          <img src={luxury2} alt="luxury2" className="w-1/4 md:w-1/4" />
+          <img src={luxury3} alt="luxury3" className="w-1/4 md:w-1/4" />
+        </div>
+        <div className="text-justify text-sm md:text-base leading-relaxed">
+          We also have several well-positioned affiliate offices in China, providing our clients with access to buyers in Hong Kong, Shanghai, and Beijing.
+        </div>
+        <div className="text-justify text-sm md:text-base leading-relaxed">
+      Through our international affiliations, we have a strong presence in over 50 countries. Our luxury listings are sent to prominent international real estate sites, reaching over 70 million potential buyers and investors worldwide through our relationships with:
+    </div>
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+<section className="min-h-screen bg-white md:mx-10 px-4 py-10 flex justify-center items-center mt-8">
+  <div className="flex flex-col md:flex-row items-center space-y-10 md:space-y-0 md:space-x-8">
+
+    <div className="flex flex-col space-y-8">
+      <div className="text-center">
+        <img src={envelope} alt="envelope" className="w-44 h-44 mx-auto"/>
+        <div className="mt-4 font-serif text-3xl">Responsive</div>
+        <p className="mt-2 text-md">I am always available via phone, text, or email to answer your questions in a timely manner.</p>
+      </div>
+      <div className="text-center">
+        <img src={map} alt="map" className="w-44 h-44 mx-auto"/>
+        <div className="mt-4 font-serif text-3xl">Virtual Tour</div>
+        <p className="mt-2 text-md">Let’s make your home stand out with a high-quality virtual tour.</p>
+      </div>
+    </div>
+
+   
+    <div className="flex justify-center">
+      <img src={phone} alt="phone" className="w-60 h-60 md:w-96 md:h-96"/>
+    </div>
+
+  
+    <div className="flex flex-col space-y-8">
+      <div className="text-center">
+        <img src={flag} alt="flag" className="w-44 h-44 mx-auto"/>
+        <div className="mt-4 font-serif text-3xl">Syndication</div>
+        <p className="mt-2 text-md ">I market your property locally, nationally, and internationally.</p>
+      </div>
+      <div className="text-center">
+        <img src={drone} alt="drone" className="w-44 h-44 mx-auto"/>
+        <div className="mt-4 font-serif text-3xl">Drone Photography</div>
+        <p className="mt-2 text-md">Beautiful photography is a central part of our marketing plan for your property.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section
+  className="w-full min-h-screen flex items-center justify-center h-full bg-no-repeat bg-cover bg-center relative"
+  style={{ backgroundImage: `url(${work})` }}
+>
+  <div className="absolute inset-0 bg-black opacity-60"></div>
+  <div className="relative z-10 flex flex-col justify-center items-center text-center space-y-6 px-4">
+    <h1 className="text-white text-3xl md:text-5xl font-semibold font-serif">Work With Us</h1>
+    <div className="hidden md:block w-20 h-[2px] bg-white my-4"></div>
+    <div className="text-white text-lg md:text-xl max-w-2xl">
+      With decades of experience in luxurious Tri Valley real estate, our team is here to ensure that your dreams become a reality. Let us guide you through your home-buying journey. Contact us today!
+    </div>
+    <button className="w-48 h-12 bg-black text-white px-6 text-sm md:text-md font-bold  rounded-full hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-700 transition duration-300">
+      CONTACT US
+    </button>
+  </div>
+</section>
+
+
+
+
 
 
 
