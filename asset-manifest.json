@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Luxury-Presence---Project/static/css/main.fba10f41.css",
-    "main.js": "/Luxury-Presence---Project/static/js/main.b3922103.js",
+    "main.css": "/Luxury-Presence---Project/static/css/main.9fdbbdb8.css",
+    "main.js": "/Luxury-Presence---Project/static/js/main.946a08ef.js",
     "static/js/453.038b1095.chunk.js": "/Luxury-Presence---Project/static/js/453.038b1095.chunk.js",
     "static/media/ServiceBG.png": "/Luxury-Presence---Project/static/media/ServiceBG.19597ae14b3f6854f02a.png",
     "static/media/work.png": "/Luxury-Presence---Project/static/media/work.19597ae14b3f6854f02a.png",
@@ -26,12 +26,12 @@
     "static/media/slick.ttf": "/Luxury-Presence---Project/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/Luxury-Presence---Project/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/Luxury-Presence---Project/index.html",
-    "main.fba10f41.css.map": "/Luxury-Presence---Project/static/css/main.fba10f41.css.map",
-    "main.b3922103.js.map": "/Luxury-Presence---Project/static/js/main.b3922103.js.map",
+    "main.9fdbbdb8.css.map": "/Luxury-Presence---Project/static/css/main.9fdbbdb8.css.map",
+    "main.946a08ef.js.map": "/Luxury-Presence---Project/static/js/main.946a08ef.js.map",
     "453.038b1095.chunk.js.map": "/Luxury-Presence---Project/static/js/453.038b1095.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fba10f41.css",
-    "static/js/main.b3922103.js"
+    "static/css/main.9fdbbdb8.css",
+    "static/js/main.946a08ef.js"
   ]
 }
