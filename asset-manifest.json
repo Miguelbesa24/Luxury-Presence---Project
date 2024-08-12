@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Luxury-Presence---Project/static/css/main.c577272e.css",
-    "main.js": "/Luxury-Presence---Project/static/js/main.4f67a206.js",
+    "main.css": "/Luxury-Presence---Project/static/css/main.afb39fa8.css",
+    "main.js": "/Luxury-Presence---Project/static/js/main.a148d907.js",
     "static/js/453.038b1095.chunk.js": "/Luxury-Presence---Project/static/js/453.038b1095.chunk.js",
     "static/media/ServiceBG.png": "/Luxury-Presence---Project/static/media/ServiceBG.19597ae14b3f6854f02a.png",
     "static/media/work.png": "/Luxury-Presence---Project/static/media/work.19597ae14b3f6854f02a.png",
@@ -16,20 +16,22 @@
     "static/media/slide2.png": "/Luxury-Presence---Project/static/media/slide2.49596d654bb4ff9ba4e1.png",
     "static/media/luxury.png": "/Luxury-Presence---Project/static/media/luxury.e2ffa6a281afadf53836.png",
     "static/media/flip3.png": "/Luxury-Presence---Project/static/media/flip3.ca9f4320428c901f0c1f.png",
+    "static/media/linkedin.png": "/Luxury-Presence---Project/static/media/linkedin.4ad216aa218e80b2b559.png",
     "static/media/flip4.png": "/Luxury-Presence---Project/static/media/flip4.86c6185219fb3accabf1.png",
     "static/media/flip1.png": "/Luxury-Presence---Project/static/media/flip1.c34ccf26a41bacae9520.png",
     "static/media/flip2.png": "/Luxury-Presence---Project/static/media/flip2.6906dbb30f2000ac287a.png",
+    "static/media/fb.png": "/Luxury-Presence---Project/static/media/fb.ce8b512b93bc292c5511.png",
     "static/media/slick.svg": "/Luxury-Presence---Project/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/Luxury-Presence---Project/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/Luxury-Presence---Project/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/Luxury-Presence---Project/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/Luxury-Presence---Project/index.html",
-    "main.c577272e.css.map": "/Luxury-Presence---Project/static/css/main.c577272e.css.map",
-    "main.4f67a206.js.map": "/Luxury-Presence---Project/static/js/main.4f67a206.js.map",
+    "main.afb39fa8.css.map": "/Luxury-Presence---Project/static/css/main.afb39fa8.css.map",
+    "main.a148d907.js.map": "/Luxury-Presence---Project/static/js/main.a148d907.js.map",
     "453.038b1095.chunk.js.map": "/Luxury-Presence---Project/static/js/453.038b1095.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c577272e.css",
-    "static/js/main.4f67a206.js"
+    "static/css/main.afb39fa8.css",
+    "static/js/main.a148d907.js"
   ]
 }
