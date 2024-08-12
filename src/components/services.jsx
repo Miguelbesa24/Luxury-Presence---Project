@@ -28,6 +28,11 @@ import luxury5 from "../assets/luxury5.png";
 import drone from "../assets/drone.png";
 import phone from "../assets/phone.png";
 import work from "../assets/work.png";
+import footer1 from "../assets/footer1.png";
+import footer2 from "../assets/footer2.png";
+import footer3 from "../assets/footer3.png";
+import fb from "../assets/fb.png";
+import linkedin from "../assets/linkedin.png";
 
 const Services = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -107,144 +112,152 @@ const Services = () => {
 
   return (
     <div>
-      <nav
-        id="navbar"
-        className="fixed top-0 w-full z-10 bg-transparent px-10 pt-12"
+   <nav
+  id="navbar"
+  className="fixed top-0 w-full z-10 bg-transparent px-10 pt-12"
+>
+  <div className="flex justify-between items-center text-gray-100 font-sans font-bold text-xs pb-4">
+    <div className="flex items-center">
+    <img 
+  src={Logo} 
+  alt="Logo" 
+  className="sm:w-22 sm:h-10 md:w-18 md:h-3 lg:w-18 lg:h-3 pr-4"
+/>
+    </div>
+    <div className="hidden md:flex space-x-8">
+      <a
+        href="#meet-team"
+        className="hover:text-gray-400 hover-underline-offset transition duration-100"
       >
-        <div className="flex justify-between items-center text-gray-100 font-sans font-bold text-xs pb-4">
-          <div className="flex items-center">
-            <img src={Logo} alt="Logo" className="w-18 h-3 pr-4" />
-          </div>
-          <div className="hidden md:flex space-x-8">
-            <a
-              href="#meet-team"
-              className="hover:text-gray-400 hover-underline-offset transition duration-100"
-            >
-              MEET TEAM
-            </a>
-            <a
-              href="#search-homes"
-              className="hover:text-gray-400 hover-underline-offset transition duration-100"
-            >
-              SEARCH FOR HOMES
-            </a>
-            <a
-              href="#our-communities"
-              className="hover:text-gray-400 hover-underline-offset transition duration-100"
-            >
-              OUR COMMUNITIES
-            </a>
-            <a
-              href="#home-valuation"
-              className="hover:text-gray-400 hover-underline-offset transition duration-100"
-            >
-              HOME VALUATION
-            </a>
-            <a
-              href="#services"
-              className="hover:text-gray-400 hover-underline-offset transition duration-100"
-            >
-              SERVICES
-            </a>
-            <a
-              href="#homes-america"
-              className="hover:text-gray-400 hover-underline-offset transition duration-100"
-            >
-              HOMES ACROSS AMERICA
-            </a>
-            <a
-              href="#testimonials"
-              className="hover:text-gray-400 hover-underline-offset transition duration-100"
-            >
-              TESTIMONIALS
-            </a>
-            <a
-              href="#contact-us"
-              className="hover:text-gray-400 hover-underline-offset transition duration-100"
-            >
-              CONTACT US
-            </a>
-          </div>
-          <div className="md:hidden flex justify-end items-center w-full">
-            <button
-              onClick={toggleMenu}
-              className="text-2xl focus:outline-none"
-            >
-              &#9776;
-            </button>
-          </div>
-        </div>
-      </nav>
-      {isMenuOpen && (
-        <nav className="fixed top-0 left-0 w-full bg-black shadow-md z-20 md:hidden">
-          <div className="flex flex-col p-6 text-xl text-gray-100">
-            <div className="flex justify-end">
-              <button
-                onClick={toggleMenu}
-                className="text-2xl font-bold text-gray-100 focus:outline-none"
-              >
-                &times;
-              </button>
-            </div>
-            <a
-              href="#meet-team"
-              onClick={toggleMenu}
-              className="hover:text-gray-400 mt-4"
-            >
-              MEET TEAM
-            </a>
-            <a
-              href="#search-homes"
-              onClick={toggleMenu}
-              className="hover:text-gray-400 mt-2"
-            >
-              SEARCH FOR HOMES
-            </a>
-            <a
-              href="#our-communities"
-              onClick={toggleMenu}
-              className="hover:text-gray-400 mt-2"
-            >
-              OUR COMMUNITIES
-            </a>
-            <a
-              href="#home-valuation"
-              onClick={toggleMenu}
-              className="hover:text-gray-400 mt-2"
-            >
-              HOME VALUATION
-            </a>
-            <a
-              href="#services"
-              onClick={toggleMenu}
-              className="hover:text-gray-400 mt-2"
-            >
-              SERVICES
-            </a>
-            <a
-              href="#homes-america"
-              onClick={toggleMenu}
-              className="hover:text-gray-400 mt-2"
-            >
-              HOMES ACROSS AMERICA
-            </a>
-            <a
-              href="#testimonials"
-              onClick={toggleMenu}
-              className="hover:text-gray-400 mt-2"
-            >
-              TESTIMONIALS
-            </a>
-            <a
-              href="#contact-us"
-              onClick={toggleMenu}
-              className="hover:text-gray-400 mt-2"
-            >
-              CONTACT US
-            </a>
-          </div>
-        </nav>
-      )}
+        MEET TEAM
+      </a>
+      <a
+        href="#search-homes"
+        className="hover:text-gray-400 hover-underline-offset transition duration-100"
+      >
+        SEARCH FOR HOMES
+      </a>
+      <a
+        href="#our-communities"
+        className="hover:text-gray-400 hover-underline-offset transition duration-100"
+      >
+        OUR COMMUNITIES
+      </a>
+      <a
+        href="#home-valuation"
+        className="hover:text-gray-400 hover-underline-offset transition duration-100"
+      >
+        HOME VALUATION
+      </a>
+      <a
+        href="#services"
+        className="hover:text-gray-400 hover-underline-offset transition duration-100"
+      >
+        SERVICES
+      </a>
+      <a
+        href="#homes-america"
+        className="hover:text-gray-400 hover-underline-offset transition duration-100"
+      >
+        HOMES ACROSS AMERICA
+      </a>
+      <a
+        href="#testimonials"
+        className="hover:text-gray-400 hover-underline-offset transition duration-100"
+      >
+        TESTIMONIALS
+      </a>
+      <a
+        href="#contact-us"
+        className="hover:text-gray-400 hover-underline-offset transition duration-100"
+      >
+        CONTACT US
+      </a>
+    </div>
+    <div className="md:hidden flex justify-end items-center w-full">
+      <button
+        onClick={toggleMenu}
+        className="text-2xl focus:outline-none"
+      >
+        &#9776;
+      </button>
+    </div>
+  </div>
+</nav>
+
+{isMenuOpen && (
+  <nav className="fixed inset-0 bg-black bg-opacity-75 z-20 md:hidden flex flex-col p-6">
+    <div className="flex justify-between items-center mb-8 mt-8">
+      <img src={Logo} alt="Logo" className="w-36 h-auto" />
+      <button
+        onClick={toggleMenu}
+        className="text-2xl font-bold text-gray-100 focus:outline-none"
+      >
+        &times;
+      </button>
+    </div>
+    <div className="flex flex-col text-xl text-gray-100 space-y-6">
+      <a
+        href="#meet-team"
+        onClick={toggleMenu}
+        className="hover:text-gray-400"
+      >
+        MEET TEAM
+      </a>
+      <a
+        href="#search-homes"
+        onClick={toggleMenu}
+        className="hover:text-gray-400"
+      >
+        SEARCH FOR HOMES
+      </a>
+      <a
+        href="#our-communities"
+        onClick={toggleMenu}
+        className="hover:text-gray-400"
+      >
+        OUR COMMUNITIES
+      </a>
+      <a
+        href="#home-valuation"
+        onClick={toggleMenu}
+        className="hover:text-gray-400"
+      >
+        HOME VALUATION
+      </a>
+      <a
+        href="#services"
+        onClick={toggleMenu}
+        className="hover:text-gray-400"
+      >
+        SERVICES
+      </a>
+      <a
+        href="#homes-america"
+        onClick={toggleMenu}
+        className="hover:text-gray-400"
+      >
+        HOMES ACROSS AMERICA
+      </a>
+      <a
+        href="#testimonials"
+        onClick={toggleMenu}
+        className="hover:text-gray-400"
+      >
+        TESTIMONIALS
+      </a>
+      <a
+        href="#contact-us"
+        onClick={toggleMenu}
+        className="hover:text-gray-400"
+      >
+        CONTACT US
+      </a>
+    </div>
+  </nav>
+)}
+
+
 
       <section
         id="services-page"
@@ -739,7 +752,7 @@ const Services = () => {
   style={{ backgroundImage: `url(${work})` }}
 >
   <div className="absolute inset-0 bg-black opacity-60"></div>
-  <div className="relative z-10 flex flex-col justify-center items-center text-center space-y-6 px-4">
+  <div className="relative flex flex-col justify-center items-center text-center space-y-6 px-4">
     <h1 className="text-white text-3xl md:text-5xl font-semibold font-serif">Work With Us</h1>
     <div className="hidden md:block w-20 h-[2px] bg-white my-4"></div>
     <div className="text-white text-lg md:text-xl max-w-2xl">
@@ -750,7 +763,96 @@ const Services = () => {
     </button>
   </div>
 </section>
+<section id="footer" className="min-h-screen bg-white px-4 py-10 md:mx-10 mt-8 flex justify-center items-center">
+  <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-3 gap-8">
+ 
+    <div>
+      <h3 className="text-xl font-bold mb-4">Julie Hansen Partnership</h3>
+      <p className="text-justify text-gray-700">
+        An elite group of the East Bay’s most talented and visionary real estate professionals believed buyers and sellers deserved more from their real estate company. More service. More resources. More integrity. More global reach. In a word, more of everything people should expect when they buy or sell their homes.
+      </p>
+    </div>
 
+   
+    <div>
+      <h3 className="text-xl font-bold mb-4">ADDRESS</h3>
+      <p className="text-gray-700">
+        4733 Chabot Drive #100<br />
+        Pleasanton, CA 94588
+      </p>
+      <p className="mt-4 text-gray-700">
+        Julie Hansen-Orvis | CA DRE# 00934447
+      </p>
+      <h3 className="text-xl font-bold mt-6 mb-4">CONTACT INFORMATION</h3>
+      <p className="text-gray-700">
+        (925) 553-6707<br />
+        luxuryhomesinwc@icloud.com
+      </p>
+      <div class="flex space-x-4 mt-4">
+  
+  <button>
+    <img src={fb} alt="Facebook" class="w-12 h-12 mx-auto"/>
+  </button>
+
+ 
+  <button>
+    <img src={linkedin} alt="LinkedIn" class="w-10 h-10 mx-auto "/>
+  </button>
+</div>
+
+    </div>
+    
+
+    <div>
+      <h3 className="text-xl font-bold mb-4">Newsletter</h3>
+      <p className="text-gray-700 mb-4">
+        Subscribe to our Newsletter for the latest news and updates. Stay tuned!
+      </p>
+      <div className="mb-4">
+        <input
+          type="email"
+          placeholder="Email Address"
+          className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-gray-500"
+        />
+      </div>
+      <div className="flex items-center mb-4">
+        <input
+          type="checkbox"
+          id="simple-checkbox"
+          className="h-4 w-4 text-black focus:ring-black border-gray-300 rounded"
+        />
+        <label for="simple-checkbox" className="ml-2 text-gray-700">
+          Accept terms and conditions
+        </label>
+      </div>
+      <p className="text-xs text-gray-600 mb-4">
+        By providing Julie Hansen Partnership your contact information, you acknowledge and agree to our Privacy Policy and consent to receiving marketing communications, including through automated calls, texts, and emails, some of which may use artificial or prerecorded voices.
+      </p>
+      <div>
+        <button className="w-full py-2 bg-black text-white font-bold rounded hover:bg-gray-700 transition">
+          SUBSCRIBE
+        </button>
+      </div>
+      <div className="flex flex-row mt-4 justify-center items-center ">
+      <img src={footer1} alt="footer1" className="w-12 h-12 mx-auto"/>
+      <img src={footer2} alt="footer2" className="w-12 h-12 mx-auto "/>
+      <img src={footer3} alt="footer3" className="w-12 h-4  mx-auto"/>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer className="bg-gray-200 text-center ">
+  <div className="flex flex-col md:flex-row justify-between items-center space-y-2 md:mx-32 md:space-y-0 md:space-x-4">
+    <div>
+      Website Designed & Developed by <span className="underline">Luxury Presence</span>
+    </div>
+    <div >
+      Copyright 2024 | Privacy Policy
+    </div>
+  </div>
+</footer>
 
 
 
