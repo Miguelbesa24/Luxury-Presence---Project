@@ -124,7 +124,7 @@ const Services = () => {
   className="sm:w-22 sm:h-10 md:w-18 md:h-3 lg:w-18 lg:h-3 pr-4"
 />
     </div>
-    <div className="hidden md:flex lg:text-base space-x-8">
+    <div className="hidden md:flex sm:text-xs md:text-xs lg:text-base space-x-8">
       <a
         href="#meet-team"
         className="hover:text-gray-400 hover-underline-offset transition duration-100"
