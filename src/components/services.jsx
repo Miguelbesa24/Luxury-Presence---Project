@@ -72,7 +72,7 @@ const Services = () => {
   const texts = [
     "Decor Guidance",
     `<ul class="list-disc pl-5">
-      <h1 class="text-xl font-bold">My Staging Expertise</h1>
+      <h1 class="text-xl xl:text-2xl font-bold">My Staging Expertise</h1>
        <br>
       <li>Unclutter and organize your home</li>
       <li>Neatly arrange drawers and cabinets</li>
@@ -291,7 +291,7 @@ const Services = () => {
       </section>
 
       <section id="marketing" className="w-full min-h-screen pt-24">
-  <div className="text-2xl md:text-5xl font-serif flex justify-center text-center">
+  <div className="text-2xl md:text-5xl font-serif flex justify-center text-center xl:text-6xl">
     Comprehensive Marketing Plan
   </div>
   <div className="py-20 md:px-20">
@@ -303,169 +303,171 @@ const Services = () => {
       />
     </div>
 
-    {/* Start of responsive section */}
-    <div className="flex flex-wrap justify-center md:justify-between items-center text-center space-y-12 md:space-y-0">
+  
+    <div className="flex flex-wrap justify-center md:justify-between items-center text-center space-y-12 md:space-y-0 ">
       <div className="w-full md:w-1/4 px-4">
-        <img src={envelope} alt="Responsive" className="w-44 h-44 mx-auto" />
-        <div className="font-serif text-3xl mt-4">Responsive</div>
-        <div className="px-6 mt-2">
+        <img src={envelope} alt="Responsive" className="w-44 h-44 xl:w-64 xl:h-64 mx-auto " />
+        <div className="font-serif text-3xl mt-4 xl:text-4xl">Responsive</div>
+        <div className="px-6 mt-2 xl:text-xl">
           I am always available via phone, text, or email.
         </div>
       </div>
 
       <div className="w-full md:w-1/4 px-4">
-        <img src={flag} alt="Syndication" className="w-44 h-44 mx-auto" />
-        <div className="font-serif text-3xl mt-4">Syndication</div>
-        <div className="px-6 mt-2">
+        <img src={flag} alt="Syndication" className="w-44 h-44 xl:w-64 xl:h-64 mx-auto" />
+        <div className="font-serif text-3xl mt-4 xl:text-4xl">Syndication</div>
+        <div className="px-6 mt-2 xl:text-xl">
           I market your property locally, nationally, and internationally.
         </div>
       </div>
 
       <div className="w-full md:w-1/4 px-4">
-        <img src={map} alt="Virtual Tour" className="w-44 h-44 mx-auto" />
-        <div className="font-serif text-3xl mt-4">Virtual Tour</div>
-        <div className="px-6 mt-2">
+        <img src={map} alt="Virtual Tour" className="w-44 h-44 xl:w-64 xl:h-64 mx-auto" />
+        <div className="font-serif text-3xl mt-4 xl:text-4xl">Virtual Tour</div>
+        <div className="px-6 mt-2 xl:text-xl">
           Let's make your home stand out with a high-quality virtual tour.
         </div>
       </div>
 
       <div className="w-full md:w-1/4 px-4">
-        <img src={photo} alt="Photography" className="w-44 h-44 mx-auto" />
-        <div className="font-serif text-3xl mt-4">Photography</div>
-        <div className="px-6 mt-2">
+        <img src={photo} alt="Photography" className="w-44 h-44 xl:w-64 xl:h-64 mx-auto" />
+        <div className="font-serif text-3xl mt-4 xl:text-4xl">Photography</div>
+        <div className="px-6 mt-2 xl:text-xl">
           Beautiful, high-end photography is a central part of our marketing plan for your property.
         </div>
       </div>
     </div>
-    {/* End of responsive section */}
+   
   </div>
 </section>
 
 
-      <section
-        id="flip"
-        className="w-full min-h-screen pt-8 flex justify-center items-center bg-gray-200"
+<section
+  id="flip"
+  className="w-full min-h-screen pt-8 flex justify-center items-center bg-gray-200"
+>
+  <div className="flex flex-wrap justify-center gap-4">
+    {images.map((image, index) => (
+      <div
+        key={index}
+        ref={(el) => (cardRefs.current[index] = el)}
+        className={`flip-card relative md:w-64 md:h-64 xl:w-96 xl:h-96 cursor-pointer perspective ${
+          flippedCard === index ? "flipped" : ""
+        }`}
+        onMouseEnter={() => handleMouseEnter(index)}
+        onMouseLeave={() => handleMouseLeave(index)}
+        onClick={() => handleCardClick(index)}
       >
-        <div className="flex flex-wrap justify-center gap-4">
-          {images.map((image, index) => (
-            <div
-              key={index}
-              ref={(el) => (cardRefs.current[index] = el)}
-              className={`flip-card relative md:w-64 md:h-64 cursor-pointer perspective ${
-                flippedCard === index ? "flipped" : ""
-              }`}
-              onMouseEnter={() => handleMouseEnter(index)}
-              onMouseLeave={() => handleMouseLeave(index)}
-              onClick={() => handleCardClick(index)}
-            >
-              <div className="flip-card-inner">
-                {/* Front Side */}
-                <div
-                  className={`flip-card-front absolute inset-0 w-full h-full backface-hidden rounded-lg ${
-                    index % 2 === 0
-                      ? "flex flex-col items-center justify-center bg-gray-800"
-                      : ""
-                  }`}
-                >
-                  {index % 2 === 0 ? (
-                    <div className="text-center px-4 py-2">
-                      <p className="text-sm md:text-lg lg:text-2xl text-white font-serif">
-                        {texts[index]}
-                      </p>
-                    </div>
-                  ) : (
-                    <img
-                      src={image}
-                      alt={`Flip Card Front ${index + 1}`}
-                      className="w-full h-full object-cover rounded-lg shadow-lg"
-                    />
-                  )}
-                </div>
+        <div className="flip-card-inner">
+          {/* Front Side */}
+          <div
+            className={`flip-card-front absolute inset-0 w-full h-full backface-hidden rounded-lg ${
+              index % 2 === 0
+                ? "flex flex-col items-center justify-center bg-gray-800"
+                : ""
+            }`}
+          >
+            {index % 2 === 0 ? (
+              <div className="text-center px-4 py-2">
+                <p className="text-sm md:text-lg lg:text-2xl xl:text-3xl text-white font-serif">
+                  {texts[index]}
+                </p>
+              </div>
+            ) : (
+              <img
+                src={image}
+                alt={`Flip Card Front ${index + 1}`}
+                className="w-full h-full object-cover rounded-lg shadow-lg"
+              />
+            )}
+          </div>
 
-                {/* Back Side */}
-                <div
-                  className={`flip-card-back absolute inset-0 w-full h-full backface-hidden rounded-lg ${
-                    index % 2 === 0 ? "bg-gray-800" : "bg-gray-800"
-                  }`}
-                >
-                  {index % 2 === 0 ? (
-                    <img
-                      src={image}
-                      alt={`Flip Card Back ${index + 1}`}
-                      className="w-full h-full object-cover rounded-lg shadow-lg"
-                    />
-                  ) : (
-                    <div className="px-4 py-4">
-                      <p
-                        className="text-sm md:text-sm font-semibold text-white"
-                        dangerouslySetInnerHTML={{ __html: texts[index] }}
-                      />
-                    </div>
-                  )}
-                </div>
+          {/* Back Side */}
+          <div
+            className={`flip-card-back absolute inset-0 w-full h-full backface-hidden rounded-lg ${
+              index % 2 === 0 ? "bg-gray-800" : "bg-gray-800"
+            }`}
+          >
+            {index % 2 === 0 ? (
+              <img
+                src={image}
+                alt={`Flip Card Back ${index + 1}`}
+                className="w-full h-full object-cover rounded-lg shadow-lg"
+              />
+            ) : (
+              <div className="px-4 py-4">
+                <p
+                  className="text-sm md:text-sm xl:text-2xl font-semibold text-white"
+                  dangerouslySetInnerHTML={{ __html: texts[index] }}
+                />
               </div>
-            </div>
-          ))}
-        </div>
-      </section>
-      <section
-        id="selling"
-        className="min-h-screen flex flex-col items-center justify-center bg-center bg-cover bg-no-repeat px-4 md:px-10 relative rounded-3xl mt-10"
-        style={{
-          backgroundImage: `url(${selling})`,
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-        }}
-      >
-        <div className="absolute inset-0 bg-black opacity-50 rounded-3xl"></div>
-        <div className="relative flex flex-col items-center text-white text-2xl md:text-5xl font-serif my-10 md:pt-0">
-          <h2 className="text-center">The Selling Process</h2>
-        </div>
-        <div className="relative flex flex-col md:flex-row items-center text-center w-full px-4 md:px-10 mt-10 md:mt-18">
-          <div className="flex flex-col w-full">
-            <div className="flex flex-col md:flex-row text-white md:space-x-10 space-y-6 md:space-y-0">
-              <div className="flex flex-col items-center text-xl flex-shrink-0 mb-4 md:mb-0">
-                <NumberAnimation number={1} />
-                <div className="md:leading-tight">
-                  INITIAL CONSULTATION &<br /> PLANNING
-                </div>
-              </div>
-              <div className="md:px-10"></div>
-              <div className="flex flex-col items-center text-xl flex-shrink-0 mb-4 md:mb-0">
-                <NumberAnimation number={2} />
-                <div className="md:leading-tight">
-                  DEVISE & EXECUTE <br /> MARKETING PLAN
-                </div>
-              </div>
-              <div className="md:px-10"></div>
-              <div className="flex flex-col items-center text-xl flex-shrink-0 mb-4 md:mb-0">
-                <NumberAnimation number={3} />
-                <div className="md:leading-tight">
-                  REVIEW OFFERS & REACH <br /> AGREEMENT WITH BUYER
-                </div>
-              </div>
-            </div>
-
-            <div className="hidden md:block w-full h-[1.5px] bg-white relative my-8"></div>
-
-            <div className="flex flex-col md:flex-row text-white md:space-x-10 space-y-6 md:space-y-0">
-              <div className="md:px-10"></div>
-              <div className="flex flex-col items-center text-xl flex-shrink-0 mb-4 md:mb-0">
-                <NumberAnimation number={4} />
-                <div className="md:leading-tight">
-                  COMPLETE TRANSACTION PROCESS
-                </div>
-              </div>
-              <div className="md:px-10"></div>
-              <div className="flex flex-col items-center text-xl flex-shrink-0 mb-4 md:mb-0">
-                <NumberAnimation number={5} />
-                <div className="md:leading-tight">AFTER - SALE SERVICE</div>
-              </div>
-              <div className="md:px-10"></div>
-            </div>
+            )}
           </div>
         </div>
-      </section>
+      </div>
+    ))}
+  </div>
+</section>
+
+<section
+  id="selling"
+  className="min-h-screen flex flex-col items-center justify-center bg-center bg-cover bg-no-repeat px-4 md:px-10 relative rounded-3xl mt-10"
+  style={{
+    backgroundImage: `url(${selling})`,
+    backgroundPosition: "center",
+    backgroundSize: "cover",
+  }}
+>
+  <div className="absolute inset-0 bg-black opacity-50 rounded-3xl"></div>
+  <div className="relative flex flex-col items-center text-white text-2xl md:text-5xl xl:text-7xl font-serif my-10 md:pt-0">
+    <h2 className="text-center">The Selling Process</h2>
+  </div>
+  <div className="relative flex flex-col md:flex-row items-center text-center w-full px-4 md:px-10 mt-10 md:mt-18">
+    <div className="flex flex-col w-full">
+      <div className="flex flex-col md:flex-row text-white md:space-x-10 space-y-6 md:space-y-0 xl:justify-center">
+        <div className="flex flex-col items-center text-xl md:text-2xl xl:text-4xl flex-shrink-0 mb-4 md:mb-0">
+          <NumberAnimation number={1} />
+          <div className="md:leading-tight">
+            INITIAL CONSULTATION &<br /> PLANNING
+          </div>
+        </div>
+        <div className="md:px-10"></div>
+        <div className="flex flex-col items-center text-xl md:text-2xl xl:text-4xl flex-shrink-0 mb-4 md:mb-0">
+          <NumberAnimation number={2} />
+          <div className="md:leading-tight">
+            DEVISE & EXECUTE <br /> MARKETING PLAN
+          </div>
+        </div>
+        <div className="md:px-10"></div>
+        <div className="flex flex-col items-center text-xl md:text-2xl xl:text-4xl flex-shrink-0 mb-4 md:mb-0">
+          <NumberAnimation number={3} />
+          <div className="md:leading-tight">
+            REVIEW OFFERS & REACH <br /> AGREEMENT WITH BUYER
+          </div>
+        </div>
+      </div>
+
+      <div className="hidden md:block w-full h-[1.5px] bg-white relative my-8"></div>
+
+      <div className="flex flex-col md:flex-row text-white md:space-x-10 space-y-6 md:space-y-0 xl:justify-center">
+        <div className="md:px-10"></div>
+        <div className="flex flex-col items-center text-xl md:text-2xl xl:text-4xl flex-shrink-0 mb-4 md:mb-0">
+          <NumberAnimation number={4} />
+          <div className="md:leading-tight">
+            COMPLETE TRANSACTION PROCESS
+          </div>
+        </div>
+        <div className="md:px-10"></div>
+        <div className="flex flex-col items-center text-xl md:text-2xl xl:text-4xl flex-shrink-0 mb-4 md:mb-0">
+          <NumberAnimation number={5} />
+          <div className="md:leading-tight">AFTER - SALE SERVICE</div>
+        </div>
+        <div className="md:px-10"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
       <section
         id="buying"
         className="min-h-screen flex flex-col items-center justify-center bg-center bg-cover bg-no-repeat px-4 md:px-10 relative rounded-3xl mt-10"
@@ -476,21 +478,21 @@ const Services = () => {
         }}
       >
         <div className="absolute inset-0 bg-black opacity-50 rounded-3xl"></div>
-        <div className="relative flex flex-col items-center text-white text-2xl md:text-5xl font-serif my-10 md:pt-0">
+        <div className="relative flex flex-col items-center text-white text-2xl xl:text-7xl md:text-5xl font-serif my-10 md:pt-0">
           <h2 className="text-center">The Buying Process</h2>
         </div>
         <div className="relative flex flex-col md:flex-row items-center text-center w-full px-4 md:px-10 mt-10 md:mt-18">
           <div className="flex flex-col w-full">
             <div className="flex flex-col md:flex-row text-white md:space-x-10 space-y-6 md:space-y-0">
               <div className="md:px-10"></div>
-              <div className="flex flex-col items-center text-xl flex-shrink-0 mb-4 md:mb-0">
+              <div className="flex flex-col items-center text-xl flex-shrink-0 mb-4 md:mb-0 xl:text-4xl">
                 <NumberAnimation number={1} />
                 <div className="md:leading-tight">
                   INITIAL CONSULTATION &<br /> PLANNING
                 </div>
               </div>
               <div className="md:px-10"></div>
-              <div className="flex flex-col items-center text-xl flex-shrink-0 mb-4 md:mb-0">
+              <div className="flex flex-col items-center text-xl flex-shrink-0 mb-4 md:mb-0 xl:text-4xl">
                 <NumberAnimation number={2} />
                 <div className="md:leading-tight">
                   SEARCH FOR A HOME & <br></br> GET PRE-APPROVED
@@ -500,14 +502,14 @@ const Services = () => {
 
             <div className="hidden md:block w-full h-[1.5px] bg-white relative my-8"></div>
 
-            <div className="flex flex-col md:flex-row text-white md:space-x-10 space-y-6 md:space-y-0">
+            <div className="flex flex-col md:flex-row text-white md:space-x-10 space-y-6 md:space-y-0 xl:justify-center ">
               <div className="md:px-32"></div>
-              <div className="flex flex-col items-center text-xl flex-shrink-0 mb-4 md:mb-0">
+              <div className="flex flex-col items-center text-xl flex-shrink-0 mb-4 md:mb-0 xl:text-4xl">
                 <NumberAnimation number={3} />
                 <div className="md:leading-tight">SUBMIT AN OFFER</div>
               </div>
               <div className="md:px-10"></div>
-              <div className="flex flex-col items-center text-xl flex-shrink-0 mb-4 md:mb-0">
+              <div className="flex flex-col items-center text-xl flex-shrink-0 mb-4 md:mb-0 xl:text-4xl">
                 <NumberAnimation number={4} />
                 <div className="md:leading-tight">
                   COMPLETE SETTLEMENT PROCESS
@@ -519,23 +521,23 @@ const Services = () => {
         </div>
       </section>
       <section className="min-h-screen px-4 md:px-10 flex justify-center items-center">
-  <Slider {...settings} className="w-full max-w-6xl mx-auto">
+  <Slider {...settings} className="w-full max-w-7xl mx-auto">
     {/* Slide 1 */}
     <div className="flex flex-col items-center justify-center mt-10 px-4 md:px-10">
       <div className="flex flex-col md:flex-row items-center justify-center w-full max-w-6xl">
-        <div className="flex flex-col text-center md:text-left space-y-4 md:space-y-6 w-full md:w-1/2 px-4 md:px-8">
-          <div className="text-xl md:text-3xl font-bold">
+        <div className="flex flex-col text-center md:text-left space-y-4 md:space-y-6 xl:space-y-8 w-full md:w-1/2 px-4 md:px-8 xl:px-12">
+          <div className="text-xl md:text-3xl xl:text-5xl font-bold">
             Over 33 Years of Real Estate Success
           </div>
-          <div className="text-sm md:text-lg leading-relaxed">
+          <div className="text-sm md:text-lg xl:text-2xl leading-relaxed">
             We provide every one of our clients with a level of service they won’t find anywhere else. We give them what they need, often before they know they need it. In real estate, almost everything can be negotiated. When you choose Hansen Partners, it is experience is 100% nonnegotiable. And it’s an experience like no other.
           </div>
         </div>
-        <div className="w-full md:w-1/2 mt-8 md:mt-0 px-4 md:px-8 flex justify-center ">
+        <div className="w-full md:w-1/2 mt-8 md:mt-0 px-4 md:px-8 xl:px-12 flex justify-center">
           <img
             src={slide1}
             alt="slide"
-            className="w-full md:w-3/4 h-auto shadow-2xl rounded-lg"
+            className="w-full md:w-3/4 xl:w-full h-auto shadow-2xl rounded-lg"
           />
         </div>
       </div>
@@ -544,18 +546,18 @@ const Services = () => {
     {/* Slide 2 */}
     <div className="flex flex-col items-center justify-center mt-10 px-4 md:px-10">
       <div className="flex flex-col md:flex-row items-center justify-center space-y-10 md:space-y-0">
-        <div className="w-full md:w-1/2 px-4 md:px-8 flex justify-center">
+        <div className="w-full  md:w-1/2 px-4 md:px-8 flex justify-center">
           <img
             src={slide2}
             alt="slide"
-            className="w-full md:w-3/4 h-auto shadow-2xl rounded-lg"
+            className="w-full md:w-3/4 xl:w-full h-auto shadow-2xl rounded-lg"
           />
         </div>
-        <div className="flex flex-col text-center md:text-left space-y-4 md:space-y-6 w-full md:w-1/2 px-4 md:px-8">
-          <div className="text-xl md:text-3xl font-bold">
+        <div className="flex flex-col text-center md:text-left space-y-4 md:space-y-6 xl:space-y-8 w-full md:w-1/2 px-4 md:px-8 xl:px-12">
+          <div className="text-xl md:text-3xl xl:text-4xl font-bold">
             We Want To Create An Unforgettable Experience For You...
           </div>
-          <div className="text-sm md:text-lg leading-relaxed">
+          <div className="text-sm md:text-lg xl:text-2xl leading-relaxed">
             We combine data gained from your home’s Comparative Market Analysis with local market research to create a marketing plan designed to help you meet your selling goals. Your home’s carefully designed plan will include a range of online, print, and other marketing tools targeted to the best-qualified pool of buyers. Successfully marketing a home in today’s real estate environment requires a firm with experience and flexibility. Hansen Partners provides both.
           </div>
         </div>
@@ -565,19 +567,19 @@ const Services = () => {
     {/* Slide 3 */}
     <div className="flex flex-col items-center justify-center mt-10 px-4 md:px-10">
       <div className="flex flex-col md:flex-row items-center justify-center space-y-10 md:space-y-0">
-        <div className="flex flex-col text-center md:text-left space-y-4 md:space-y-6 w-full md:w-1/2 px-4 md:px-8">
-          <div className="text-xl md:text-3xl font-bold">
+        <div className="flex flex-col text-center md:text-left space-y-4 md:space-y-6 xl:space-y-8 w-full md:w-1/2 px-4 md:px-8 xl:px-12">
+          <div className="text-xl md:text-3xl xl:text-4xl font-bold">
             The Hansen Partners Communications Tablet
           </div>
-          <div className="text-sm md:text-lg leading-relaxed">
+          <div className="text-sm md:text-lg xl:text-2xl leading-relaxed">
             We have created this as a wonderful tool so that we can communicate with you daily, provide you with updates on what is happening with your home. We are available with a click of your tablet.
           </div>
         </div>
-        <div className="w-full md:w-1/2 px-4 md:px-8 flex justify-center">
+        <div className="w-full md:w-1/2 px-4 md:px-8 xl:px-12 flex justify-center">
           <img
             src={slide3}
             alt="slide"
-            className="w-full md:w-3/4 h-auto shadow-2xl rounded-lg"
+            className="w-full md:w-3/4 xl:w-full h-auto shadow-2xl rounded-lg"
           />
         </div>
       </div>
@@ -586,19 +588,19 @@ const Services = () => {
     {/* Slide 4 */}
     <div className="flex flex-col items-center justify-center mt-10 px-4 md:px-10">
       <div className="flex flex-col md:flex-row items-center justify-center space-y-10 md:space-y-0">
-        <div className="flex flex-col text-center md:text-left space-y-4 md:space-y-6 w-full md:w-1/2 px-4 md:px-8">
-          <div className="text-xl md:text-3xl font-bold">
+        <div className="flex flex-col text-center md:text-left space-y-4 md:space-y-6 xl:space-y-8 w-full md:w-1/2 px-4 md:px-8 xl:px-12">
+          <div className="text-xl md:text-3xl xl:text-4xl font-bold">
             Benefits:
           </div>
-          <ul className="text-sm md:text-lg leading-relaxed list-disc list-inside space-y-2">
+          <ul className="text-sm md:text-lg xl:text-2xl leading-relaxed list-disc list-inside space-y-2 xl:space-y-3">
             <li>Review all documents and sign in the comfort of your home or anywhere.</li>
             <li>Stay up to date on all marketing activities, review materials, photos, etc. in real-time.</li>
             <li>Meet with us face to face on our Gotomeeting.com platform to go over and discuss the events of the week.</li>
             <li>You have your own email assigned just for you and your common space to quickly write a note, or quickly send a video message to us for fast communication using our BombBomb video messaging system.</li>
           </ul>
         </div>
-        <div className="w-full md:w-1/2 px-4 md:px-8 flex justify-center">
-          <div className="text-sm md:text-lg leading-relaxed">
+        <div className="w-full md:w-1/2 px-4 md:px-8 xl:px-12 flex justify-center">
+          <div className="text-sm md:text-lg xl:text-2xl leading-relaxed">
             We believe that transparency and guiding you and your family through the process is key to having the best experience. During these uncertain times, it is reassuring to know you have someone with a proven track record you can count on. We will be here to handle your needs during the Real Estate process. We think of it before a need even arises. Because that is just what we do. Who you work with does matter!
           </div>
         </div>
@@ -607,67 +609,67 @@ const Services = () => {
   </Slider>
 </section>
 
+
 <section className="min-h-screen px-4 md:px-10 py-10 flex justify-center items-center bg-gray-100 mt-8">
-  <div className="flex flex-col w-full max-w-7xl space-y-8">
-    <div className="text-3xl md:text-4xl font-serif text-gray-800 text-center">
+  <div className="flex flex-col w-full max-w-7xl space-y-8 ">
+    <div className="text-3xl md:text-4xl xl:text-5xl font-semibold font-serif text-gray-800 text-center">
       We Market Your Home to The World
     </div>
-    <div className="text-xl md:text-2xl font-semibold text-gray-700 text-center">
+    <div className="text-xl md:text-2xl xl:text-3xl font-semibold text-gray-700 text-center">
       Our Online Marketing Strategy
     </div>
-    <div className="text-base md:text-lg leading-relaxed text-gray-600 text-center ">
+    <div className="text-base md:text-lg xl:text-2xl leading-relaxed text-gray-600 text-center">
       The Bay Area remains one of the world's most sought-after regions to live in, and when looking to sell, it is vital that your home be marketed online to audiences locally, nationally, and internationally.
     </div>
     <div className="flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-8">
-      <div className="flex flex-col bg-white p-6 rounded-lg shadow-lg">
-        <div className="text-xl font-bold text-gray-800 mb-2">
+      <div className="flex flex-col bg-white p-6 rounded-lg shadow-lg xl:p-8">
+        <div className="text-xl xl:text-2xl font-bold text-gray-800 mb-2">
           Local Exposure
         </div>
-        <div className="text-base text-gray-600 leading-relaxed">
+        <div className="text-base xl:text-lg text-gray-600 leading-relaxed">
           Through our partnership with Nextdoor, the private online social network now used in over 80% of U.S. neighborhoods and virtually all Bay Area neighborhoods, we make sure your home receives targeted local exposure. When you list your home with Hansen Partners it will automatically appear on Nextdoor in your neighborhood.
         </div>
       </div>
-      <div className="flex flex-col bg-white p-6 rounded-lg shadow-lg">
-        <div className="text-xl font-bold text-gray-800 mb-2">
+      <div className="flex flex-col bg-white p-6 rounded-lg shadow-lg xl:p-8">
+        <div className="text-xl xl:text-2xl font-bold text-gray-800 mb-2">
           National Exposure
         </div>
-        <div className="text-base text-gray-600 leading-relaxed">
+        <div className="text-base xl:text-lg text-gray-600 leading-relaxed">
           We secure strategic positioning and enhancement on Realtor.com, Trulia, and Zillow, driving more consumers to your home and increasing exposure. We will receive every inquiry about your property directly.
         </div>
       </div>
-      <div className="flex flex-col bg-white p-6 rounded-lg shadow-lg">
-        <div className="text-xl font-bold text-gray-800 mb-2">
+      <div className="flex flex-col bg-white p-6 rounded-lg shadow-lg xl:p-8">
+        <div className="text-xl xl:text-2xl font-bold text-gray-800 mb-2">
           International Exposure
         </div>
-        <div className="text-base text-gray-600 leading-relaxed">
+        <div className="text-base xl:text-lg text-gray-600 leading-relaxed">
           To expose your luxury listing to millions of potential homebuyers worldwide, we promote on prominent international real estate portals, including Wall Street Journal, LuxuryPortfolio.com, LuxuryRealEstate.com, LeadingRE.com, UniqueHomes.com, China.apr.com, Caimeiju, Juwai, and Country Life UK.
         </div>
       </div>
     </div>
     <div className="flex justify-center items-center mt-10">
-      <img src={sponsor} alt="sponsor" className="w-1/2 md:w-1/6" />
+      <img src={sponsor} alt="sponsor" className="w-1/2 md:w-1/6 xl:w-1/8" />
     </div>
   </div>
 </section>
-
 <section className="min-h-screen px-4 md:mx-20 flex justify-center items-center">
-  <div className="flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-8 w-full">
+  <div className="flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-8 w-full xl:mx-52">
     <div className="flex flex-col md:w-1/2 space-y-6">
       <div className="flex flex-row space-x-4 justify-center">
-        <img src={luxury} alt="luxury1" className="w-1/4 md:w-[10%]" />
-        <img src={luxury2} alt="luxury2" className="w-1/4 md:w-1/6" />
-        <img src={luxury3} alt="luxury3" className="w-1/4 md:w-1/5" />
+        <img src={luxury} alt="luxury1" className="w-1/4 md:w-[10%] xl:w-[15%]" />
+        <img src={luxury2} alt="luxury2" className="w-1/4 md:w-1/6 xl:w-1/4" />
+        <img src={luxury3} alt="luxury3" className="w-1/4 md:w-1/5 xl:w-1/3" />
       </div>
-      <div className="text-lg font-bold text-center md:text-left">
+      <div className="text-lg md:text-2xl xl:text-4xl font-bold text-center md:text-left">
         Leading Real Estate Companies of The World® & Luxury Portfolio International
       </div>
-      <div className="text-justify text-sm md:text-base leading-relaxed">
+      <div className="text-justify text-sm md:text-base xl:text-2xl leading-relaxed">
         JRockcliff is a founding member of Luxury Portfolio International®, the luxury division of Leading Real Estate Companies of the World®. With more than 500 member firms around the world, our luxury listings are exposed to a vast global audience and reach potential buyers and investors in over 50 countries.
       </div>
-      <div className="text-lg font-bold text-center md:text-left">
+      <div className="text-lg md:text-2xl xl:text-4xl font-bold text-center md:text-left">
         Who's Who in Luxury Real Estate
       </div>
-      <div className="text-justify text-sm md:text-base leading-relaxed">
+      <div className="text-justify text-sm md:text-base xl:text-2xl leading-relaxed">
         Who’s Who in Luxury Real Estate is a global collection of luxury real estate brokers.
       </div>
     </div>
@@ -677,30 +679,30 @@ const Services = () => {
   </div>
 </section>
 
+
 <section className="min-h-screen px-4 py-10 flex justify-center items-center mt-8 bg-gray-100">
-  <div className="flex flex-col space-y-8 md:mx-20">
+  <div className="flex flex-col space-y-8 md:mx-20 xl:mx-52">
     <div className="flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-8 w-full">
       <div className="md:w-1/2 flex justify-center md:justify-end">
         <img src={luxury5} alt="luxury5" className="w-full md:w-[90%] rounded-lg shadow-lg" />
       </div>
       <div className="flex flex-col md:w-1/2 space-y-6">
-        <div className="text-justify text-sm md:text-base leading-relaxed">
+        <div className="text-justify text-sm md:text-base xl:text-2xl leading-relaxed">
           Through our international affiliations, we have a strong presence in over 50 countries. Our luxury listings are sent to prominent international real estate sites, reaching over 70 million potential buyers and investors worldwide through our relationships with:
         </div>
         <div className="flex justify-center space-x-4">
-          <img src={luxury} alt="luxury1" className="w-1/4 md:w-1/5" />
-          <img src={luxury2} alt="luxury2" className="w-1/4 md:w-1/4" />
-          <img src={luxury3} alt="luxury3" className="w-1/4 md:w-1/4" />
+          <img src={luxury} alt="luxury1" className="w-1/4 md:w-1/5 xl:w-[15%]" />
+          <img src={luxury2} alt="luxury2" className="w-1/4 md:w-1/4 xl:w-[20%]" />
+          <img src={luxury3} alt="luxury3" className="w-1/4 md:w-1/4 xl:w-[25%]" />
         </div>
-        <div className="text-justify text-sm md:text-base leading-relaxed">
+        <div className="text-justify text-sm md:text-base xl:text-2xl leading-relaxed">
           We also have several well-positioned affiliate offices in China, providing our clients with access to buyers in Hong Kong, Shanghai, and Beijing.
         </div>
-        <div className="text-justify text-sm md:text-base leading-relaxed">
-      Through our international affiliations, we have a strong presence in over 50 countries. Our luxury listings are sent to prominent international real estate sites, reaching over 70 million potential buyers and investors worldwide through our relationships with:
-    </div>
+        <div className="text-justify text-sm md:text-base xl:text-2xl leading-relaxed">
+          Through our international affiliations, we have a strong presence in over 50 countries. Our luxury listings are sent to prominent international real estate sites, reaching over 70 million potential buyers and investors worldwide through our relationships with:
+        </div>
       </div>
     </div>
-    
   </div>
 </section>
 
@@ -709,87 +711,88 @@ const Services = () => {
 
     <div className="flex flex-col space-y-8">
       <div className="text-center">
-        <img src={envelope} alt="envelope" className="w-44 h-44 mx-auto"/>
-        <div className="mt-4 font-serif text-3xl">Responsive</div>
-        <p className="mt-2 text-md">I am always available via phone, text, or email to answer your questions in a timely manner.</p>
+        <img src={envelope} alt="envelope" className="w-56 h-56 mx-auto xl:w-64 xl:h-64"/>
+        <div className="mt-4 font-serif text-4xl xl:text-5xl">Responsive</div>
+        <p className="mt-2 text-lg xl:text-xl">I am always available via phone, text, or email to answer your questions in a timely manner.</p>
       </div>
       <div className="text-center">
-        <img src={map} alt="map" className="w-44 h-44 mx-auto"/>
-        <div className="mt-4 font-serif text-3xl">Virtual Tour</div>
-        <p className="mt-2 text-md">Let’s make your home stand out with a high-quality virtual tour.</p>
+        <img src={map} alt="map" className="w-56 h-56 mx-auto xl:w-64 xl:h-64"/>
+        <div className="mt-4 font-serif text-4xl xl:text-5xl">Virtual Tour</div>
+        <p className="mt-2 text-lg xl:text-xl">Let’s make your home stand out with a high-quality virtual tour.</p>
       </div>
     </div>
 
-   
     <div className="flex justify-center">
-      <img src={phone} alt="phone" className="w-60 h-60 md:w-96 md:h-96"/>
+      <img src={phone} alt="phone" className="w-72 h-72 md:w-[400px] md:h-[400px] xl:w-[600px] xl:h-[600px]"/>
     </div>
 
-  
     <div className="flex flex-col space-y-8">
       <div className="text-center">
-        <img src={flag} alt="flag" className="w-44 h-44 mx-auto"/>
-        <div className="mt-4 font-serif text-3xl">Syndication</div>
-        <p className="mt-2 text-md ">I market your property locally, nationally, and internationally.</p>
+        <img src={flag} alt="flag" className="w-56 h-56 mx-auto xl:w-64 xl:h-64"/>
+        <div className="mt-4 font-serif text-4xl xl:text-5xl">Syndication</div>
+        <p className="mt-2 text-lg xl:text-xl">I market your property locally, nationally, and internationally.</p>
       </div>
       <div className="text-center">
-        <img src={drone} alt="drone" className="w-44 h-44 mx-auto"/>
-        <div className="mt-4 font-serif text-3xl">Drone Photography</div>
-        <p className="mt-2 text-md">Beautiful photography is a central part of our marketing plan for your property.</p>
+        <img src={drone} alt="drone" className="w-56 h-56 mx-auto xl:w-64 xl:h-64"/>
+        <div className="mt-4 font-serif text-4xl xl:text-5xl">Drone Photography</div>
+        <p className="mt-2 text-lg xl:text-xl">Beautiful photography is a central part of our marketing plan for your property.</p>
       </div>
     </div>
   </div>
 </section>
+
 <section
   className="w-full min-h-screen flex items-center justify-center h-full bg-no-repeat bg-cover bg-center relative"
   style={{ backgroundImage: `url(${work})` }}
 >
   <div className="absolute inset-0 bg-black opacity-60"></div>
   <div className="relative flex flex-col justify-center items-center text-center space-y-6 px-4">
-    <h1 className="text-white text-3xl md:text-5xl font-semibold font-serif">Work With Us</h1>
-    <div className="hidden md:block w-20 h-[2px] bg-white my-4"></div>
-    <div className="text-white text-lg md:text-xl max-w-2xl">
+    <h1 className="text-white text-3xl md:text-5xl font-semibold font-serif xl:text-7xl">Work With Us</h1>
+    <div className="hidden md:block w-20 h-[2px] bg-white my-4 xl:w-32"></div>
+    <div className="text-white text-lg md:text-xl max-w-2xl xl:text-3xl ">
       With decades of experience in luxurious Tri Valley real estate, our team is here to ensure that your dreams become a reality. Let us guide you through your home-buying journey. Contact us today!
     </div>
-    <button className="w-48 h-12 bg-black text-white px-6 text-sm md:text-md font-bold  rounded-full hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-700 transition duration-300">
+    
+    <button className="w-48 h-12 xl:w-64 xl:h-20 xl:text-xl bg-black text-white px-6 text-sm md:text-md font-bold  rounded-full hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-700 transition duration-300">
       CONTACT US
     </button>
+   
   </div>
 </section>
 <section id="footer" className="min-h-screen bg-white px-4 py-10 md:mx-10 mt-8 flex justify-center items-center">
-  <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-3 gap-8">
+  <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-3 gap-8 xl:space-x-20 xl:max-w-[90%]">
  
     <div>
-      <h3 className="text-xl font-bold mb-4">Julie Hansen Partnership</h3>
-      <p className="text-justify text-gray-700">
+      <h3 className="text-xl font-bold mb-4 xl:text-4xl">Julie Hansen Partnership</h3>
+      <p className="text-justify text-gray-700 xl:text-2xl">
         An elite group of the East Bay’s most talented and visionary real estate professionals believed buyers and sellers deserved more from their real estate company. More service. More resources. More integrity. More global reach. In a word, more of everything people should expect when they buy or sell their homes.
       </p>
     </div>
 
    
     <div>
-      <h3 className="text-xl font-bold mb-4">ADDRESS</h3>
-      <p className="text-gray-700">
+      <h3 className="text-xl font-bold mb-4 xl:text-4xl">Address</h3>
+      <p className="text-gray-700 xl:text-2xl">
         4733 Chabot Drive #100<br />
         Pleasanton, CA 94588
       </p>
-      <p className="mt-4 text-gray-700">
+      <p className="mt-4 text-gray-700 xl:text-2xl">
         Julie Hansen-Orvis | CA DRE# 00934447
       </p>
-      <h3 className="text-xl font-bold mt-6 mb-4">CONTACT INFORMATION</h3>
-      <p className="text-gray-700">
+      <h3 className="text-xl font-bold mt-6 mb-4 xl:text-4xl">Contact Information</h3>
+      <p className="text-gray-700 xl:text-2xl">
         (925) 553-6707<br />
         luxuryhomesinwc@icloud.com
       </p>
       <div class="flex space-x-4 mt-4">
   
   <button>
-    <img src={fb} alt="Facebook" class="w-12 h-12 mx-auto"/>
+    <img src={fb} alt="Facebook" class="w-12 h-12 mx-auto xl:w-20 xl:h-20"/>
   </button>
 
  
   <button>
-    <img src={linkedin} alt="LinkedIn" class="w-10 h-10 mx-auto "/>
+    <img src={linkedin} alt="LinkedIn" class="w-10 h-10 mx-auto xl:w-16 xl:h-16"/>
   </button>
 </div>
 
@@ -797,51 +800,51 @@ const Services = () => {
     
 
     <div>
-      <h3 className="text-xl font-bold mb-4">Newsletter</h3>
-      <p className="text-gray-700 mb-4">
+      <h3 className="text-xl font-bold mb-4 xl:text-4xl">Newsletter</h3>
+      <p className="text-gray-700 mb-4  xl:text-2xl">
         Subscribe to our Newsletter for the latest news and updates. Stay tuned!
       </p>
       <div className="mb-4">
         <input
           type="email"
           placeholder="Email Address"
-          className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-gray-500"
+          className="w-full xl:h-14 p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-gray-500"
         />
       </div>
       <div className="flex items-center mb-4">
         <input
           type="checkbox"
           id="simple-checkbox"
-          className="h-4 w-4 text-black focus:ring-black border-gray-300 rounded"
+          className="h-4 w-4 xl:h-6 xl:w-4 text-black focus:ring-black border-gray-300 rounded"
         />
-        <label for="simple-checkbox" className="ml-2 text-gray-700">
+        <label for="simple-checkbox" className="ml-2 text-gray-700  xl:text-lg">
           Accept terms and conditions
         </label>
       </div>
-      <p className="text-xs text-gray-600 mb-4">
+      <p className="text-xs text-gray-600 mb-4  xl:text-xl">
         By providing Julie Hansen Partnership your contact information, you acknowledge and agree to our Privacy Policy and consent to receiving marketing communications, including through automated calls, texts, and emails, some of which may use artificial or prerecorded voices.
       </p>
       <div>
-        <button className="w-full py-2 bg-black text-white font-bold rounded hover:bg-gray-700 transition">
+        <button className="w-full py-2 bg-black text-white font-bold rounded-lg hover:bg-gray-700 transition xl:h-14 xl:text-xl">
           SUBSCRIBE
         </button>
       </div>
       <div className="flex flex-row mt-4 justify-center items-center ">
-      <img src={footer1} alt="footer1" className="w-12 h-12 mx-auto"/>
-      <img src={footer2} alt="footer2" className="w-12 h-12 mx-auto "/>
-      <img src={footer3} alt="footer3" className="w-12 h-4  mx-auto"/>
+      <img src={footer1} alt="footer1" className="w-12 h-12 xl:w-20 xl:h-20 mx-auto"/>
+      <img src={footer2} alt="footer2" className="w-12 h-12 xl:w-20 xl:h-20 mx-auto "/>
+      <img src={footer3} alt="footer3" className="w-12 h-4  xl:w-20 xl:h-6 mx-auto"/>
         
       </div>
     </div>
   </div>
 </section>
 
-<footer className="bg-gray-200 text-center ">
-  <div className="flex flex-col md:flex-row justify-between items-center space-y-2 md:mx-32 md:space-y-0 md:space-x-4">
-    <div>
+<footer className="bg-gray-200 text-center xl:h-10 ">
+  <div className="flex flex-col md:flex-row justify-center items-center space-y-2 md:mx-32 md:space-y-0 md:space-x-4">
+    <div className="xl:text-xl">
       Website Designed & Developed by <span className="underline">Luxury Presence</span>
     </div>
-    <div >
+    <div className="xl:text-xl" >
       Copyright 2024 | Privacy Policy
     </div>
   </div>
