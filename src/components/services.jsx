@@ -124,7 +124,7 @@ const Services = () => {
   className="sm:w-22 sm:h-10 md:w-18 md:h-3 lg:w-18 lg:h-3 pr-4"
 />
     </div>
-    <div className="hidden md:flex space-x-8">
+    <div className="hidden md:flex lg:text-base space-x-8">
       <a
         href="#meet-team"
         className="hover:text-gray-400 hover-underline-offset transition duration-100"
@@ -266,7 +266,7 @@ const Services = () => {
       >
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div>
-          <div className="relative text-center text-white text-7xl font-serif py-10">
+          <div className="relative text-center text-white text-7xl font-serif py-10 lg:text-8xl">
             Services
           </div>
           <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4">
@@ -290,64 +290,56 @@ const Services = () => {
       </section>
 
       <section id="marketing" className="w-full min-h-screen pt-24">
-        <div className="text-2xl md:text-5xl font-serif flex justify-center text-center">
-          Comprehensive Marketing Plan
+  <div className="text-2xl md:text-5xl font-serif flex justify-center text-center">
+    Comprehensive Marketing Plan
+  </div>
+  <div className="py-20 md:px-20">
+    <div className="flex justify-center py-6">
+      <img
+        src={desktop}
+        alt="Desktop view"
+        className="w-full md:w-3/4 shadow-lg"
+      />
+    </div>
+
+    {/* Start of responsive section */}
+    <div className="flex flex-wrap justify-center md:justify-between items-center text-center space-y-12 md:space-y-0">
+      <div className="w-full md:w-1/4 px-4">
+        <img src={envelope} alt="Responsive" className="w-44 h-44 mx-auto" />
+        <div className="font-serif text-3xl mt-4">Responsive</div>
+        <div className="px-6 mt-2">
+          I am always available via phone, text, or email.
         </div>
-        <div className="py-20 md:px-20">
-          <div className="flex justify-center py-6">
-            <img
-              src={desktop}
-              alt="Desktop view"
-              className="w-full md:w-3/4 shadow-lg"
-            />
-          </div>
+      </div>
 
-          <div className="flex flex-col md:flex-row justify-between items-center text-center ml-10 pr-10">
-            <div>
-              <img
-                src={envelope}
-                alt="Responsive"
-                className="w-44 h-44 mx-auto"
-              />
-              <div className="font-serif text-3xl mt-4">Responsive</div>
-              <div className="px-6 mt-2">
-                I am always available via phone, text, or email.
-              </div>
-            </div>
-
-            <div>
-              <img src={flag} alt="Syndication" className="w-44 h-44 mx-auto" />
-              <div className="font-serif text-3xl mt-4">Syndication</div>
-              <div className="px-6 mt-2">
-                I market your property locally, nationally, and internationally.
-              </div>
-            </div>
-          </div>
-
-          <div className="flex flex-col md:flex-row justify-between items-center text-center ml-10 pr-10 mt-12">
-            <div>
-              <img src={map} alt="Virtual Tour" className="w-44 h-44 mx-auto" />
-              <div className="font-serif text-3xl mt-4">Virtual Tour</div>
-              <div className="px-6 mt-2">
-                Let's make your home stand out with a high-quality virtual tour.
-              </div>
-            </div>
-
-            <div>
-              <img
-                src={photo}
-                alt="Photography"
-                className="w-44 h-44 mx-auto"
-              />
-              <div className="font-serif text-3xl mt-4">Photography</div>
-              <div className="px-6 mt-2">
-                Beautiful, high-end photography is a central part of our
-                marketing plan for your property.
-              </div>
-            </div>
-          </div>
+      <div className="w-full md:w-1/4 px-4">
+        <img src={flag} alt="Syndication" className="w-44 h-44 mx-auto" />
+        <div className="font-serif text-3xl mt-4">Syndication</div>
+        <div className="px-6 mt-2">
+          I market your property locally, nationally, and internationally.
         </div>
-      </section>
+      </div>
+
+      <div className="w-full md:w-1/4 px-4">
+        <img src={map} alt="Virtual Tour" className="w-44 h-44 mx-auto" />
+        <div className="font-serif text-3xl mt-4">Virtual Tour</div>
+        <div className="px-6 mt-2">
+          Let's make your home stand out with a high-quality virtual tour.
+        </div>
+      </div>
+
+      <div className="w-full md:w-1/4 px-4">
+        <img src={photo} alt="Photography" className="w-44 h-44 mx-auto" />
+        <div className="font-serif text-3xl mt-4">Photography</div>
+        <div className="px-6 mt-2">
+          Beautiful, high-end photography is a central part of our marketing plan for your property.
+        </div>
+      </div>
+    </div>
+    {/* End of responsive section */}
+  </div>
+</section>
+
 
       <section
         id="flip"
