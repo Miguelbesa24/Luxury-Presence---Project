@@ -116,15 +116,16 @@ const Services = () => {
   id="navbar"
   className="fixed top-0 w-full z-10 bg-transparent px-10 pt-12"
 >
-  <div className="flex justify-between items-center text-gray-100 font-sans font-bold text-xs pb-4">
+<div className="flex justify-between items-center text-gray-100 font-sans font-bold text-xs md:text-base lg:text-xs xl:text-xl pb-4">
+
     <div className="flex items-center">
     <img 
   src={Logo} 
   alt="Logo" 
-  className="sm:w-22 sm:h-10 md:w-18 md:h-3 lg:w-18 lg:h-3 pr-4"
+  className="sm:w-22 sm:h-10 md:w-18 md:h-3 lg:w-18 lg:h-3 pr-4 xl:w-36 xl:h-6"
 />
     </div>
-    <div className="hidden md:flex sm:text-xs md:text-xs lg:text-base space-x-8">
+    <div className="hidden md:flex space-x-8">
       <a
         href="#meet-team"
         className="hover:text-gray-400 hover-underline-offset transition duration-100"
@@ -266,22 +267,22 @@ const Services = () => {
       >
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div>
-          <div className="relative text-center text-white text-7xl font-serif py-10 lg:text-8xl">
+          <div className="relative text-center text-white text-7xl font-serif py-10 lg:text-8xl xl:text-9xl">
             Services
           </div>
           <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4">
             <div className="relative w-full max-w-md">
               <input
                 type="text"
-                className="block w-full h-10 rounded-md border border-gray-300 py-3 pl-4 pr-20 placeholder:text-sm text-gray-900 placeholder-gray-500 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 sm:text-base"
+                className="block w-full h-10 xl:h-14 xl:w-96 xl:placeholder:text-lg rounded-md border border-gray-300 py-3 pl-4 pr-20 placeholder:text-sm text-gray-900 placeholder-gray-500 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 sm:text-base"
                 placeholder="Search by Address or Area"
               />
-              <button className="absolute inset-y-0 right-0 flex items-center px-5 bg-black font-bold text-white text-sm rounded-r-md hover:bg-gray-500 focus:outline-none focus:ring-2">
+              <button className="absolute inset-y-0 right-0 flex items-center px-5 bg-black font-bold text-white xl:text-base text-sm rounded-r-md hover:bg-gray-500 focus:outline-none focus:ring-2">
                 Search
               </button>
             </div>
             <div className="relative">
-              <button className="w-44 h-10 bg-black text-white px-4 text-xs font-bold rounded-md hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-500">
+              <button className="w-44 h-10 xl:h-14 xl:w-52 bg-black text-white px-4 text-xs xl:text-base font-bold rounded-md hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-500">
                 BOOK AN APPOINTMENT
               </button>
             </div>
